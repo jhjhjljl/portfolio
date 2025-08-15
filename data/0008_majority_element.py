@@ -4,10 +4,10 @@ from typing import List
 
 def majority_element(nums: List[int]) -> int:
     half_len = len(nums) // 2
-    counter = defaultdict(int)
+    cnt = defaultdict(int)
     for x in nums:
-        counter[x] += 1
-        if counter[x] > half_len:
+        cnt[x] += 1
+        if cnt[x] > half_len:
             return x
     return None
 
